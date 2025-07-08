@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col h-screen">
+    <div id="header-placeholder" class="shrink-0"></div>
+    <div class="flex flex-1 min-h-0">
+      <div id="sidebar-placeholder" class="w-64 shrink-0"></div>
+      <main class="flex-1 p-6 overflow-auto">
+        <h1 class="text-xl font-semibold text-gray-800 mb-4">Tambah Part</h1>
+        <form class="flex flex-wrap gap-x-10 gap-y-4 max-w-4xl">
+          <!-- Left Column -->
+          <div class="flex flex-col space-y-4 flex-1 min-w-[250px]">
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Type</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Model</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Part No</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Doc No</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex flex-col space-y-4 flex-1 min-w-[250px]">
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Edisi</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Revisi</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Page</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="text-sm font-medium text-gray-700 w-24 shrink-0"
+                >Line</label
+              >
+              <input
+                type="text"
+                class="flex-1 px-2 py-1.5 border border-gray-300 rounded text-sm"
+              />
+            </div>
+          </div>
+        </form>
+
+        <section class="mt-10">
+          <h2 class="text-lg font-semibold text-gray-800 mb-4">Approval</h2>
+          <div class="overflow-auto">
+            <table
+              class="table-auto min-w-full text-sm text-center border border-gray-300"
+            >
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-4 py-2 border">Approval</th>
+                  <th class="px-4 py-2 border">Checked</th>
+                  <th class="px-4 py-2 border">In Charge</th>
+                  <th class="px-4 py-2 border">Inspect</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                <tr>
+                  <td class="px-4 py-6 border h-16 align-top"></td>
+                  <td class="px-4 py-6 border h-16 align-top"></td>
+                  <td class="px-4 py-6 border h-16 align-top"></td>
+                  <td class="px-4 py-6 border h-16 align-top"></td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">Manager</td>
+                  <td class="px-4 py-2 border">Supv QC</td>
+                  <td class="px-4 py-2 border">A Forman</td>
+                  <td class="px-4 py-2 border">Operator</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="mt-10">
+          <h2 class="text-lg font-semibold text-gray-800 mb-4">
+            Part Data Item
+          </h2>
+          <div class="overflow-auto">
+            <table class="min-w-full text-sm text-left border border-gray-300">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-4 py-2 border">No</th>
+                  <th class="px-4 py-2 border">Item Name</th>
+                  <th class="px-4 py-2 border">Qty</th>
+                  <th class="px-4 py-2 border">Unit</th>
+                  <th class="px-4 py-2 border">Remarks</th>
+                  <th class="px-4 py-2 border">Action</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                <tr>
+                  <td class="px-4 py-2 border">1</td>
+                  <td class="px-4 py-2 border">Bolt M10x30</td>
+                  <td class="px-4 py-2 border">4</td>
+                  <td class="px-4 py-2 border">pcs</td>
+                  <td class="px-4 py-2 border">Main assembly</td>
+                  <td class="px-4 py-2 border">
+                    <button class="text-blue-600 hover:underline mr-2">
+                      Edit
+                    </button>
+                    <button class="text-red-600 hover:underline">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2 border">2</td>
+                  <td class="px-4 py-2 border">Washer 10mm</td>
+                  <td class="px-4 py-2 border">4</td>
+                  <td class="px-4 py-2 border">pcs</td>
+                  <td class="px-4 py-2 border">Secures bolt</td>
+                  <td class="px-4 py-2 border">
+                    <button class="text-blue-600 hover:underline mr-2">
+                      Edit
+                    </button>
+                    <button class="text-red-600 hover:underline">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="mt-6">
+          <div
+            class="border border-gray-400 rounded-md px-24 pt-12 pb-8 bg-gray-50 space-y-4"
+          >
+            <div class="flex justify-center">
+              <label
+                class="cursor-pointer px-4 py-2 bg-red-600 text-white rounded text-sm font-medium hover:bg-red-700"
+              >
+                Upload Image
+                <input type="file" accept="image/*" class="hidden" />
+              </label>
+            </div>
+            <p class="text-xs text-gray-500 text-center">
+              Silakan unggah gambar pendukung untuk part atau komponen.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-10">
+          <h2 class="text-lg font-semibold text-gray-800 mb-4">
+            Inspection Table
+          </h2>
+          <div class="overflow-auto">
+            <table
+              class="table-auto min-w-full text-xs text-center border border-gray-300"
+            >
+              <thead class="bg-gray-100">
+                <tr>
+                  <th rowspan="2" class="border border-gray-300 px-2 py-1">
+                    ITEM
+                  </th>
+                  <th rowspan="2" class="border border-gray-300 px-2 py-1">
+                    ITEM CHECK
+                  </th>
+                  <th colspan="2" class="border border-gray-300 px-2 py-1">
+                    INSPECTION DEVIATION
+                  </th>
+                  <th colspan="3" class="border border-gray-300 px-2 py-1">
+                    STANDARD
+                  </th>
+                  <th rowspan="2" class="border border-gray-300 px-2 py-1">
+                    MEASUREMENT
+                  </th>
+                  <th
+                    rowspan="2"
+                    class="border border-gray-300 bg-gray-200 px-2 py-1 font-semibold"
+                  >
+                    AXIS
+                  </th>
+                  <th colspan="4" class="border border-gray-300 px-2 py-1">
+                    CODE C.R.
+                  </th>
+                  <th colspan="2" class="border border-gray-300 px-2 py-1">
+                    R
+                  </th>
+                </tr>
+                <tr>
+                  <th class="border border-gray-300 px-2 py-1">Shokaihin</th>
+                  <th class="border border-gray-300 px-2 py-1">
+                    Masspro<br />Period
+                  </th>
+                  <th class="border border-gray-300 px-2 py-1">Dimension</th>
+                  <th class="border border-gray-300 px-2 py-1">Upper</th>
+                  <th class="border border-gray-300 px-2 py-1">Lower</th>
+                  <th class="border border-gray-300 bg-gray-100 px-2 py-1">
+                    1(QH 040)
+                  </th>
+                  <th class="border border-gray-300 bg-gray-100 px-2 py-1">
+                    2(QJ 044)
+                  </th>
+                  <th class="border border-gray-300 bg-gray-100 px-2 py-1">
+                    3(QJ 045)
+                  </th>
+                  <th class="border border-gray-300 bg-gray-100 px-2 py-1">
+                    4(QJ 055)
+                  </th>
+                  <th
+                    class="border border-gray-300 bg-gray-100 font-bold px-2 py-1"
+                  >
+                    OK
+                  </th>
+                  <th
+                    class="border border-gray-300 bg-gray-100 text-red-600 font-bold px-2 py-1"
+                  >
+                    NG
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="inspectionTableBody">
+                <tr>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1 text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1 text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1">
+                    <input
+                      type="text"
+                      class="w-full text-xs px-1 border border-gray-300"
+                    />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1 text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1 text-center">
+                    <input type="checkbox" />
+                  </td>
+                  <td class="border border-gray-300 px-2 py-1 text-center">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-4 mb-8 flex justify-center">
+            <button
+              id="addInspectionRow"
+              class="bg-red-600 text-white text-sm px-3 py-1 rounded hover:bg-red-700"
+            >
+              Tambah Baris
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="comp/header.js" defer></script>
+    <script src="comp/sidebar.js" defer></script>
+    <script>
+      document
+        .getElementById("addInspectionRow")
+        .addEventListener("click", function () {
+          const tbody = document.getElementById("inspectionTableBody");
+          const row = document.createElement("tr");
+          row.innerHTML = `
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1 text-center"><input type="checkbox" /></td>
+          <td class="border border-gray-300 px-2 py-1 text-center"><input type="checkbox" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1"><input type="text" class="w-full text-xs px-1" /></td>
+          <td class="border border-gray-300 px-2 py-1 text-center"><input type="checkbox" /></td>
+          <td class="border border-gray-300 px-2 py-1 text-center"><input type="checkbox" /></td>
+          <td class="border border-gray-300 px-2 py-1 text-center"><input type="checkbox" /></td>
+        `;
+          tbody.appendChild(row);
+        });
+      // Remove 'border border-gray-300' and 'rounded' from all inputs in inspectionTableBody
+      function cleanInspectionInputClasses() {
+        const tbody = document.getElementById("inspectionTableBody");
+        if (tbody) {
+          const inputs = tbody.querySelectorAll("input");
+          inputs.forEach(function (input) {
+            input.classList.remove("border", "border-gray-300", "rounded");
+          });
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        cleanInspectionInputClasses();
+      });
+      // Also clean classes after adding a new row
+      document
+        .getElementById("addInspectionRow")
+        .addEventListener("click", function () {
+          cleanInspectionInputClasses();
+        });
+    </script>
+  </body>
+</html>

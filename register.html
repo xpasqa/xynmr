@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function toggleForm(type) {
+        document.getElementById("formYadin").style.display =
+          type === "yadin" ? "block" : "none";
+        document.getElementById("formSupplier").style.display =
+          type === "supplier" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white rounded-lg shadow-md w-full max-w-xl p-6">
+      <div class="flex justify-center mb-6 space-x-2">
+        <button
+          onclick="toggleForm('yadin')"
+          class="w-1/2 border border-red-600 text-red-600 px-4 py-2 rounded hover:bg-red-50 transition"
+        >
+          Register PT Yadin
+        </button>
+        <button
+          onclick="toggleForm('supplier')"
+          class="w-1/2 border border-red-600 text-red-600 px-4 py-2 rounded hover:bg-red-50 transition"
+        >
+          Register Supplier
+        </button>
+      </div>
+
+      <!-- PT Yadin Form -->
+      <form id="formYadin" class="space-y-4">
+        <!-- Full Name & Phone No -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Phone No</label
+            >
+            <input
+              type="tel"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+        </div>
+        <!-- Company (single-column) -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Company</label>
+          <select
+            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          >
+            <option>PT A</option>
+            <option>PT B</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <!-- Worker ID (single-column) -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700"
+            >Worker ID</label
+          >
+          <input
+            type="text"
+            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+            required
+          />
+        </div>
+        <!-- Division & Position -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Division</label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Position</label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+        </div>
+        <!-- Email & Password -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition"
+        >
+          Register
+        </button>
+      </form>
+
+      <!-- Supplier Form -->
+      <form id="formSupplier" class="space-y-4 hidden">
+        <!-- Full Name & Phone No -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Phone No</label
+            >
+            <input
+              type="tel"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+        </div>
+        <!-- Company (single-column) -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Company</label>
+          <select
+            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+          >
+            <option>PT A</option>
+            <option>PT B</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <!-- Division & Position -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Division</label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Position</label
+            >
+            <input
+              type="text"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+        </div>
+        <!-- Email & Password -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checksheet Input Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex">
+      <!-- Sidebar removed -->
+
+      <!-- Main Content -->
+      <main class="w-full p-6">
+        <h1 class="text-2xl font-bold mb-6">Input Checksheet Form</h1>
+
+        <form class="space-y-6 bg-white p-6 rounded shadow">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Test Name</label>
+              <input
+                type="text"
+                name="test_name"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Full Load</label>
+              <input
+                type="text"
+                name="full_load"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Test Date</label>
+              <input
+                type="date"
+                name="test_date"
+                value="2025-05-01"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Engine Model</label>
+              <input
+                type="text"
+                name="engine_model"
+                value="TF70V-EJ2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Engine No.</label>
+              <input
+                type="text"
+                name="engine_no"
+                value="F0000E"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Fuel</label>
+              <input
+                type="text"
+                name="fuel"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Fuel Sp. Gravity</label>
+              <input
+                type="number"
+                step="0.001"
+                name="fuel_gravity"
+                value="0.832"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Dry Temp (°C)</label>
+              <input
+                type="number"
+                step="0.1"
+                name="dry_temp"
+                value="26.1"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Wet Temp (°C)</label>
+              <input
+                type="number"
+                step="0.1"
+                name="wet_temp"
+                value="23.0"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium"
+                >Cont. Power (kW/rpm)</label
+              >
+              <input
+                type="text"
+                name="cont_power"
+                value="4.8 kW/2600 rpm"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium"
+                >Max Power (kW/rpm)</label
+              >
+              <input
+                type="text"
+                name="max_power"
+                value="5.5 kW/2600 rpm"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Limiter Position</label>
+              <input
+                type="text"
+                name="limiter_position"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Hi Idle Set (±25)</label>
+              <input
+                type="number"
+                name="hi_idle"
+                value="2740"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Eng. Speed @Load</label>
+              <input
+                type="text"
+                name="eng_speed_load"
+                value="2603 (max) / 2599 (min)"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium"
+                >Atmosphere Pressure (mmHg)</label
+              >
+              <input
+                type="number"
+                step="0.1"
+                name="atm_pressure"
+                value="748.9"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium">Operator Name</label>
+            <input
+              type="text"
+              name="operator_name"
+              value="Angga"
+              class="w-full border rounded px-3 py-2"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium">Remarks</label>
+            <textarea
+              name="remarks"
+              rows="4"
+              class="w-full border rounded px-3 py-2"
+            >
+New release\nAdd point ①</textarea
+            >
+          </div>
+
+          <div class="text-right">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Simpan
+            </button>
+          </div>
+        </form>
+
+        <form class="space-y-6 bg-white p-6 rounded shadow mt-10">
+          <h2 class="text-xl font-bold mb-4">Input Checksheet - No.2</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Test No</label>
+              <input
+                type="text"
+                name="test_no_2"
+                value="No.2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Engine Model</label>
+              <input
+                type="text"
+                name="engine_model_2"
+                value="ED 22"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Engine No.</label>
+              <input
+                type="text"
+                name="engine_no_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Dry Temp (°C)</label>
+              <input
+                type="number"
+                step="0.1"
+                name="dry_temp_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Wet Temp (°C)</label>
+              <input
+                type="number"
+                step="0.1"
+                name="wet_temp_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Hi Idle Set</label>
+              <input
+                type="number"
+                name="hi_idle_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Speed @ Load Max</label>
+              <input
+                type="number"
+                name="speed_max_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Speed @ Load Min</label>
+              <input
+                type="number"
+                name="speed_min_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium"
+                >Atmosphere Pressure (mmHg)</label
+              >
+              <input
+                type="number"
+                step="0.1"
+                name="atm_pressure_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Operator Name</label>
+              <input
+                type="text"
+                name="operator_name_2"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Remarks</label>
+              <textarea
+                name="remarks_2"
+                rows="3"
+                class="w-full border rounded px-3 py-2"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Simpan
+            </button>
+          </div>
+        </form>
+        <form class="space-y-6 bg-white p-6 rounded shadow mt-10">
+          <h2 class="text-xl font-bold mb-4">Input Checksheet - No.3</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Test No</label>
+              <input
+                type="text"
+                name="test_no_3"
+                value="No.3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Engine Model</label>
+              <input
+                type="text"
+                name="engine_model_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Engine No.</label>
+              <input
+                type="text"
+                name="engine_no_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Fuel Type</label>
+              <input
+                type="text"
+                name="fuel_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Fuel Gravity</label>
+              <input
+                type="number"
+                step="0.001"
+                name="fuel_gravity_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Date</label>
+              <input
+                type="date"
+                name="date_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Dry Temp (°C)</label>
+              <input
+                type="number"
+                step="0.1"
+                name="dry_temp_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Wet Temp (°C)</label>
+              <input
+                type="number"
+                step="0.1"
+                name="wet_temp_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Hi Idle Set</label>
+              <input
+                type="number"
+                name="hi_idle_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Speed @ Load Max</label>
+              <input
+                type="number"
+                name="speed_max_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Speed @ Load Min</label>
+              <input
+                type="number"
+                name="speed_min_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium"
+                >Atmosphere Pressure (mmHg)</label
+              >
+              <input
+                type="number"
+                step="0.1"
+                name="atm_pressure_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label class="block text-sm font-medium">Operator Name</label>
+              <input
+                type="text"
+                name="operator_name_3"
+                class="w-full border rounded px-3 py-2"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Remarks</label>
+              <textarea
+                name="remarks_3"
+                rows="3"
+                class="w-full border rounded px-3 py-2"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Simpan
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

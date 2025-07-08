@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex flex-col h-screen">
+    <div id="header-placeholder" class="shrink-0"></div>
+    <div class="flex flex-1 min-h-0">
+      <div id="sidebar-placeholder" class="w-64 shrink-0"></div>
+      <main
+        id="main-content"
+        class="flex-1 p-6 overflow-auto transition-all duration-300"
+      >
+        <div class="flex items-center justify-between mb-4">
+          <h1 class="text-2xl font-bold text-gray-800">
+            Checksheet Part Dashboard
+          </h1>
+          <button
+            class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 text-sm"
+          >
+            Tambah Part
+          </button>
+        </div>
+
+        <div class="overflow-auto">
+          <table
+            class="min-w-full bg-white border border-gray-200 text-sm rounded-lg shadow"
+          >
+            <thead
+              class="bg-gray-100 text-left text-gray-700 uppercase text-xs font-semibold"
+            >
+              <tr>
+                <th class="px-5 py-3 border-b">No</th>
+                <th class="px-5 py-3 border-b">Type</th>
+                <th class="px-5 py-3 border-b">Model</th>
+                <th class="px-5 py-3 border-b">Part No</th>
+                <th class="px-5 py-3 border-b">Status</th>
+                <th class="px-5 py-3 border-b">No Doc</th>
+                <th class="px-5 py-3 border-b">Approval</th>
+                <th class="px-5 py-3 border-b">Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700" id="checksheet-table-body">
+              <!-- Table rows will be inserted here by script -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <script src="comp/header.js" defer></script>
+    <script src="comp/sidebar.js" defer></script>
+    <script>
+      const tbody = document.getElementById("checksheet-table-body");
+      if (tbody) {
+        const types = ["CONROD", "PISTON", "VALVE", "GEAR", "SHAFT"];
+        const models = ["4TNV94HTZ", "3TNV88", "4TNV98", "3TNV70", "4TNV84T"];
+        const statuses = ["Process", "Approved", "Rejected", "Pending"];
+        const partNos = [
+          "129978-23010",
+          "124950-22010",
+          "119623-42110",
+          "123456-78900",
+          "987654-32100",
+        ];
+        const docs = [
+          "F-QC-09-978",
+          "F-QC-12-345",
+          "F-QC-11-567",
+          "F-QC-10-789",
+          "F-QC-13-321",
+        ];
+
+        const rows = Array.from({ length: 10 }).map((_, i) => {
+          const type = types[Math.floor(Math.random() * types.length)];
+          const model = models[Math.floor(Math.random() * models.length)];
+          const part = partNos[Math.floor(Math.random() * partNos.length)];
+          const status = statuses[Math.floor(Math.random() * statuses.length)];
+          const doc = docs[Math.floor(Math.random() * docs.length)];
+          const approval = status === "Approved" ? "Yes" : "-";
+
+          return `
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-3 border-b">${i + 1}</td>
+              <td class="px-5 py-3 border-b">${type}</td>
+              <td class="px-5 py-3 border-b">${model}</td>
+              <td class="px-5 py-3 border-b">${part}</td>
+              <td class="px-5 py-3 border-b">${status}</td>
+              <td class="px-5 py-3 border-b">${doc}</td>
+              <td class="px-5 py-3 border-b">${approval}</td>
+              <td class="px-5 py-3 border-b space-x-2">
+                <button class="text-blue-600 hover:underline">View</button>
+                <button class="text-green-600 hover:underline">Edit</button>
+              </td>
+            </tr>
+          `;
+        });
+
+        tbody.innerHTML = rows.join("");
+      }
+    </script>
+  </body>
+</html>
